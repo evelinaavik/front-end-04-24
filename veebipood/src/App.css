@@ -26,8 +26,7 @@ border-radius: 5px;
 }
 
 .nupp:hover {
-  background-color: chocolate;
-  
+  background-color: chocolate; 
   cursor:pointer;
   /* vajutusefekt */
 }

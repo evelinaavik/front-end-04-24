@@ -7,8 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 // loogelised sulud = 1 tükk moodulist
 
 
-// Navigeerimiseks: 1. peame panema peale uue mooduli nimega react-router-dom:
-// ""
+// Navigeerimiseks: 
+// 1. peame panema peale uue mooduli nimega react-router-dom:
+// "npm install react-router-dom"
+// 2. importima vajalikud osad sellest uuest moodulist
+// 3. peame ümbritema BrowserRouteri tagiga <App/> tagi
+// 4. peame tegema seosed URL-i ja HTML-i vahel
+
 
 
 
