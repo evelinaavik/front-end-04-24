@@ -1,0 +1,34 @@
+body {
+    background-color: #fcfcfc;
+}
+
+.a2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #114b5f;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.piltA {
+    height: 200px;
+    width: auto;
+  }
+
+  .piltA:hover{
+    padding-left:50%;
+  }
+
+  .taust {
+    background-color: #f45b69 ; 
+    padding: 30px 30px;
+    width: auto;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+  
+.a1 {
+    color: #fcfcfc;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
