@@ -35,3 +35,20 @@ border-radius: 5px;
   background-color: chartreuse;
   text-decoration: underline;
 }
+
+.summa {
+  background-color: rgb(7, 113, 113);
+  font-size: 30px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.aktiivne-summa {
+background-color: rgb(7, 113, 113);
+ border: 2px solid red;
+ color: purple;
+ font-size: 30px;
+ margin: 10px;
+ border-radius: 5px;
+
+}
