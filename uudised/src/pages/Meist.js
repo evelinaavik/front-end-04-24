@@ -14,7 +14,7 @@ function Meist() {
               <br></br>
               <br></br>
               <br></br>
-               <div> <img src="https://www.freeiconspng.com/thumbs/cat-png/cat-png-17.png" className="pilt" alt="kass-istub" />
+               <div> <img src="undraw_Team_re_0bfe.png" className="meie" alt="näod" />
                <br></br>
                <br></br>
                </div> 

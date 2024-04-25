@@ -13,11 +13,10 @@ function Avaleht() {
             <div className="taust">
               <div className="a2">Avaleht</div>
               <br></br>
-
-               <div> <img src="https://svgsilh.com/svg/30746.svg" className="piltA" alt="kass" />
+               <div> <img src="undraw_Cat_epte.png" className="piltA" alt="kass" />
                <br></br>
                <br></br>
-               <div className="a1">Kass</div>
+     
                </div> 
             </div>
         </body>
