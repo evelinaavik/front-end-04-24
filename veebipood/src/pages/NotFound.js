@@ -5,7 +5,7 @@ function NotFound() {
   return (
     <div>
        404 - NotFound
-         <Link to="Avaleht">
+         <Link to="/avaleht">
             <button>Tagasi avalehele</button>
          </Link>
            </div>
