@@ -5,6 +5,7 @@ const [laigitud, muudaLaigitud] = useState(true); //kahendväärtus e boolean; s
 // nt sisselogiine, registreermine, makstud jms
 const [kogus, muudaKogus] =useState (0);   // number; saab kokku liita jt tehted; suurem/väiksem <; nt ostukorvi 
 // kogusumma, toodete koguarv;
+
 const [sonum, muudaSonum] = useState ("Muuda kogust!")  // sõna e string; "isikukood", "postiindeks", "telefoni nr"; 
 // vt kas sisaldab sellist lühendit, suurteks tähtedeks; suurteks tähtedeks; mitu tähemärki, 
 
