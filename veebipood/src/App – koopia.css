@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+.pilt {
+height: 200px;
+/* width:100px; ctrlÄ */
+
+border-radius: 10px;
+/* nurgad ümaraks */
+}
+
+.pilt:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+.pilt:active {
+  /*nupu asukoht fikseerub  */
+  transform: scale(0.95);
+}
+
+.nupp {
+background-color: brown;
+color: white;
+border-radius: 5px;
+}
+
+.nupp:hover {
+  background-color: chocolate; 
+  cursor:pointer;
+  /* vajutusefekt */
+}
+
+.nupp:active {
+  background-color: chartreuse;
+  text-decoration: underline;
+}
