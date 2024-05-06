@@ -7,8 +7,14 @@ function Esindused() {
 // kõik, mis on inglise keele, on süsteemi poolt antud 
 // vasakul muutuja, paremal muutja 
   const [linn, muudaLinn] = useState("Tallinn"); 
+  const [keskused, muudaKeskused] = useState(["Ülemisete", "Rocca al Mare", "Magistrali", "Vesse", "Kristiine", "Järveotsa"])
+
 
   return (
+
+    
+
+
     <div>
       <div>Aktiivne linn: {linn}</div>
       <button onClick ={() => muudaLinn("Tallinn")}>Tallinn</button>
@@ -18,13 +24,17 @@ function Esindused() {
     
 
      {linn === "Tallinn" &&
-     <div>
-      <div>Ülemiste</div>
-      <div>Rocca al Mare</div>
-      <div>Magistrali</div>
-      <div>Vesse</div>
-      <div>Kristiine</div>
-      <div>Järveotsa</div>
+  <div>
+
+      {keskused.map(k => <div>{k}</div>)}
+ 
+
+      {/* // <div>Rocca al Mare</div>
+      // <div>Magistrali</div>
+      // <div>Vesse</div>
+      // <div>Kristiine</div>
+      // <div>Järveotsa</div> */}
+      
       </div>}
 
      {linn === "Tartu" &&

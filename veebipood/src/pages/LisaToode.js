@@ -6,7 +6,7 @@ function LisaToode() {
    const luger = useRef();
 
    function lisa () { 
-    if (luger.current.valu === " ") {
+    if (luger.current.value === " ") {
       muudaSonum("Toode lisamiseks pead nime andma!")
     } else { 
       muudaSonum ("Toode lisatud: " + luger.current.value + "!");}
