@@ -1,22 +1,18 @@
 import React, { useState, useRef } from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 
-
-function Seaded() {
-  const [keel, muudaKeel] = useState("est");
-
+function Seaded() {   // pean võtma localStorage-st 
+  const [keel, muudaKeel] = useState(localStorage.getItem("keel") || "est ");   // || - loob default väärtuse, kui localStorage-st tuleb tühjust ehk ei ole varasemat valikut
+  // võtab localStorage-st info keele valiku kohta   // Inspect -> application -> local storage 
 
   const aadressRef = useRef();
-  const [aadress, muudaAadress] = useState ();
+  const [aadress, muudaAadress] = useState (localStorage.getItem("aadress"));
   
   const emailRef = useRef();
-  const [email, muudaEmail] = useState ();
+  const [email, muudaEmail] = useState (localStorage.getItem("email"));
 
   const telefonRef = useRef();
-  const [telefon, muudaTelefon] = useState ();
-
-
-
+  const [telefon, muudaTelefon] = useState (localStorage.getItem("telefon"));
 
     function sisestaAadress(){
       if (aadressRef.current.value === "") {
@@ -34,9 +30,9 @@ function Seaded() {
 
             muudaAadress(aadressRef.current.value); 
             toast.success("Olemas!");
+            localStorage.setItem("aadress", aadressRef.current.value);
     }
-
-         
+       
     function sisestaEmail(){
       if (emailRef.current.value === "") {
         toast.error("Pead midagi sisestama");
@@ -50,12 +46,9 @@ function Seaded() {
 
            muudaEmail(emailRef.current.value); 
             toast.success("Olemas!");
-
+            localStorage.setItem("email", emailRef.current.value);
     }
-
-
-
-     
+  
     function sisestaTelefon(){
 
       if (telefonRef.current.value === "") {
@@ -71,26 +64,42 @@ function Seaded() {
        if (isNaN(telefonRef.current.value) === true ) {  
         toast.error("Telefoni peab olema number ");
         return;   
-
        }  
-         
-        
+                 
        toast.success("Olemas!");
       muudaTelefon(telefonRef.current.value);
+      localStorage.setItem("telefon", telefonRef.current.value);
     }
 
+    function muudaKeelEst() {
+      muudaKeel("est");
+     localStorage.setItem("keel", "est");         // see on localStorage-sse salvestamine
+    }
+
+    function muudaKeelRus() {
+      muudaKeel("rus");
+     localStorage.setItem("keel", "rus");         // see on localStorage-sse salvestamine
+    }
+
+    function muudaKeelEng() {
+      muudaKeel("eng");
+     localStorage.setItem("keel", "eng");         // see on localStorage-sse salvestamine
+    }
 
   return (
     <div>
-      <button onClick={() => muudaKeel ("est")}>Eesti keelseks</button>
-      <button onClick={() => muudaKeel ("eng")}>To English</button>
-      <button onClick={() => muudaKeel ("rus")}>Pyscckij</button>
+      <button onClick={muudaKeelEst}>Eesti keelseks</button>    
+      <button onClick={muudaKeelRus}>Pycckij</button>
+      <button onClick={muudaKeelEng}>English</button> 
+
+      {/* <button onClick={() => muudaKeel ("eng")}>To English</button>   */}
+      {/* sama kui funktsiooniga keele muutmine */}
+
       <div>Aktiivne keel: {keel} </div>
       {keel === "est" && <div>Leht on hetke eesti keelne</div>}
       {keel === "eng" && <div>Page is in English</div>}
       {keel === "rus" && <div>na pycckom</div>}
 <br /><br />
-
 
         <label>Aadress</label>
         <input type="text" ref={aadressRef} />
@@ -99,7 +108,6 @@ function Seaded() {
         Sisestatud aadress: {aadress}
        </div>
        <br /><br />
-
 
        <label>Email</label>
         <input type="text" ref={emailRef} />
@@ -110,7 +118,6 @@ function Seaded() {
        <br /><br />
 
 
-
        <label>Telefon</label>
         <input type="text" ref={telefonRef} />
         <button  onClick={sisestaTelefon} >Sisesta</button>
@@ -118,16 +125,11 @@ function Seaded() {
         Sisestatud telefon: {telefon}
        </div>
 
-
-
-         
-
        <ToastContainer 
         position="bottom-right"
         autoClose={4000}    // sekundid
         theme="dark"
        />
-
     </div>
   )
 }

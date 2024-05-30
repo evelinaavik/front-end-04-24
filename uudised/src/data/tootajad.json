@@ -1,0 +1,32 @@
+[
+        {"name": "Arnold",
+        "job": "Dynamic Optimization Supervisor",
+        "phone": "+372 574-0713"
+        },
+    
+    
+        {"name": "Aaron",
+        "job": "Senior Markets Developer",
+        "phone": "+372 493-4675"
+        },
+    
+    
+        {"name": "Marilyn",
+        "job":  "Corporate Marketing Coordinator",
+        "phone": "+372 161-7691"
+        },
+      
+    
+        {"name": "Pat",
+        "job":  "International Integration Facilitator",
+        "phone":"+372 707-8461"
+        },
+    
+    
+        {
+         "name":  "Jill",
+        "job": "Chief Integration Producer",
+        "phone": "+372 730-7623"
+        }
+      
+]

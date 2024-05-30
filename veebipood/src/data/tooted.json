@@ -1,0 +1,14 @@
+[
+
+    {"nimi": "Nobe", "hind": 83000 , "aktiivne": true, "pilt": "nobe.jpg" },
+    {"nimi": "Tesla", "hind": 73000 , "aktiivne": true, "pilt": "tesla.jpg" },
+    {"nimi": "BMW", "hind": 96000 , "aktiivne": false, "pilt": "bmw.jpg" },
+    {"nimi": "Toyota", "hind": 63000 , "aktiivne": true, "pilt": "toy.jpg" },
+    {"nimi": "Audi", "hind": 93000 , "aktiivne": false, "pilt": "audi.jpg" },
+    {"nimi": "Nissan", "hind": 95000 , "aktiivne": true, "pilt": "nissan.jpg" }
+
+
+
+
+
+]

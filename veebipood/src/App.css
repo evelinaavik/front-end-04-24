@@ -1,6 +1,20 @@
 .App {
   text-align: center;
+  background-color: white;
+  color: black;
 }
+
+
+
+
+  .App-dark {
+    text-align: center;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    /* vh - % vaate kõrgus (view height) */
+  }
+
 .pilt {
 height: 200px;
 /* width:100px; ctrlÄ */
@@ -24,6 +38,24 @@ background-color: brown;
 color: white;
 border-radius: 5px;
 }
+
+.nupp-e {
+  background-color: #824670;
+  color: white;
+  border-radius: 5px;
+  }
+
+  .nupp-t {
+    background-color: #824670;
+    color: white;
+    border-radius: 5px;
+    }
+
+    .nupp-h {
+      background-color: #717EC3;
+      color: white;
+      border-radius: 5px;
+      }
 
 .nupp:hover {
   background-color: chocolate; 
@@ -52,3 +84,4 @@ background-color: rgb(7, 113, 113);
  border-radius: 5px;
 
 }
+

@@ -1,6 +1,5 @@
 
 import React from 'react'
-import './kontakt.css'
 import {useState} from 'react';
 
 function Kontakt ()  {
@@ -10,7 +9,6 @@ function Kontakt ()  {
   // const [n2itaTelC, muudaN2itaTelC] = useState(false);
 
   return ( 
-  
   <div>
         <body>
            <div className="taust1">
@@ -24,7 +22,6 @@ function Kontakt ()  {
           <th>Kes</th> 
           <th>Kus asub</th>
           <th>Kontakt</th> 
-
         </tr>
         <tr>
           <td>Nimi Nimi <br />

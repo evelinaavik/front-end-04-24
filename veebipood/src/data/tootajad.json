@@ -1,0 +1,10 @@
+[   {"nimi": "Urmet", "ametikoht": "Account Manager" , "kontakt": "urmet@pood.ee", "telefon": "555 6667"},
+    {"nimi": "Liina", "ametikoht": "Sales Consultant" , "kontakt": "liina@pood.ee", "telefon": "555 7777" },
+    {"nimi": "Maiki", "ametikoht": "Sales Representative" , "kontakt": "maiki@pood.ee" , "telefon": "555 8887"},
+    {"nimi": "Heidi", "ametikoht": "Account Manager" , "kontakt": "heidi@pood.ee" , "telefon": "555 9997"},
+    {"nimi": "Epp", "ametikoht": "Account Executive" , "kontakt": "epp@pood.ee" , "telefon": "555 1117"},
+    {"nimi": "Kaire", "ametikoht": "Sales engineering" , "kontakt": "kaire@pood.ee" , "telefon": "555 2227"},
+    {"nimi": "Anet", "ametikoht": "Account Manager" , "kontakt": "anet@pood.ee", "telefon": "555 3337" },
+    {"nimi": "Maarja", "ametikoht": "Sales Development Representative" , "kontakt": "maarja@pood.ee" , "telefon": "555 4447" },
+    {"nimi": "Ave", "ametikoht": "Account Manager" , "kontakt": "ave@pood.ee" , "telefon": "555 5557"},
+    {"nimi": "Annika", "ametikoht": "Sales Consultant" , "kontakt": "annika@pood.ee" , "telefon": "555 6767"} ]
