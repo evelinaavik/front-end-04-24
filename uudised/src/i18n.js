@@ -14,30 +14,30 @@ const resources = {
 
     en: {
         translation: {
-              "avaleht": "Avaleht",
-              "uudised": "Uudised",
-              "kontakt": "Kontakt",
-              "info": "Info meist",
+              "avaleht": "Home Page",
+              "uudised": "News",
+              "kontakt": "Contact",
+              "info": "About us",
 
         }
     },
 
     fi: {
         translation: {
-              "avaleht": "Avaleht",
-              "uudised": "Uudised",
-              "kontakt": "Kontakt",
-              "info": "Info meist",
+              "avaleht": "Koisivu",
+              "uudised": "Uutiset",
+              "kontakt": "Ottaa yhteyttä",
+              "info": "Meistä",
 
         }
     },
 
     lv: {
         translation: {
-              "avaleht": "Avaleht",
-              "uudised": "Uudised",
-              "kontakt": "Kontakt",
-              "info": "Info meist",
+              "avaleht": "Mājas lapa",
+              "uudised": "Zinas",
+              "kontakt": "Kontakti",
+              "info": "Par mums",
 
         }
     }
