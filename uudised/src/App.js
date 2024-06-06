@@ -8,26 +8,36 @@ import Kontakt from './pages/Kontakt';
 import Meist from './pages/Meist';
 import Uudised from './pages/Uudised';
 import NavigationBar from './components/NavigationBar';
+import LisaUudis from './pages/LisaUudis';
+import HaldaUudised from './pages/HaldaUudised';
+import YksUudis from './pages/YksUudis';
+import MuudaUudis from './pages/MuudaUudis';
 
 
 function App() {
-  // const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
   return (
     <div>
-      {/* <NavigationBar></NavigationBar>
+      <NavigationBar></NavigationBar>
         <div>
           <Button as={Link} to="/avaleht/"  variant="secondary">{t('avaleht')}</Button>{' '}
           <Button as={Link} to="/uudised/" variant="secondary">{t('uudised')}</Button>{' '}
           <Button as={Link} to="/kontakt/" variant="secondary">{t('kontakt')}</Button>{' '}
           <Button as={Link} to="/info/" variant="secondary">{t('info')}</Button>{' '}
-        </div> */}
-     <Routes>
-      <Route path='' element={ <Avaleht/>}/>
-      <Route path='uudised' element={ <Uudised/>}/>
-      <Route path='kontakt' element={ <Kontakt/>}/>
-      <Route path='meist' element={ <Meist/>}/>
-     </Routes>
+          <Button as={Link} to="/lisa-uudis/" variant="secondary">{t('Lisa uudis')}</Button>{' '}
+          <Button as={Link} to="/halda-uudised/" variant="secondary">{t('Halda uudised')}</Button>{' '}
+        </div>
+      <Routes>
+        <Route path='' element={ <Avaleht/>}/>
+        <Route path='uudised' element={ <Uudised/>}/>
+        <Route path='kontakt' element={ <Kontakt/>}/>
+        <Route path='meist' element={ <Meist/>}/>
+        <Route path='lisa-uudis' element={ <LisaUudis/>}/>
+        <Route path='halda-uudised' element={ <HaldaUudised/>}/>
+        <Route path='yks-uudis/:index' element={ <YksUudis/>}/>
+        <Route path='muuda/:index' element={ <MuudaUudis/>}/>
+      </Routes>
     </div>
   );
 }

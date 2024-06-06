@@ -39,6 +39,8 @@ function NavigationBar() {
             <Nav.Link as={Link} to="/uudised/">{t('uudised')}</Nav.Link>
             <Nav.Link as={Link} to="/kontakt/">{t('kontakt')}</Nav.Link>
             <Nav.Link as={Link} to="/info/">{t('info')}</Nav.Link>
+            <Nav.Link as={Link} to="/lisa-uudis/">{t('Lisa uudis')}</Nav.Link>
+            <Nav.Link as={Link} to="/halda-uudised/">{t('Halda uudised')}</Nav.Link>
            
           </Nav>
           <Nav>

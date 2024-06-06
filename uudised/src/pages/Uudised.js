@@ -1,23 +1,20 @@
 
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Uudised() {
+  const uudised = JSON.parse(localStorage.getItem("uudised")) || [];
+
   return (
     <div>
-    <div>
-        <body>
-            <div className="taust5">
-              <div className="a2">See on uudiste leht, nähtav locahost:3000/uudised aadresssil</div>
-        
-               <br></br>
-               <br></br>
-              
-  
-            </div>
-        </body>
-    </div>
-        
-
+      <div>See on uudiste leht</div>
+        { uudised.length === 0 &&  <div>Lisame õige pea uudised. </div>}
+      <div>{uudised.map((uudis, index) =>
+         <Link to={"/uudis/" + index}> 
+      <div>{uudis}</div>
+         </Link>
+        )}
+      </div>
     </div>
   )
 }
