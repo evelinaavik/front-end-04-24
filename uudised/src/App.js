@@ -12,6 +12,8 @@ import LisaUudis from './pages/LisaUudis';
 import HaldaUudised from './pages/HaldaUudised';
 import YksUudis from './pages/YksUudis';
 import MuudaUudis from './pages/MuudaUudis';
+import KasutajaPostitus from './pages/KasutajaPostitus';
+import YksPostitus from './pages/YksPostitus';
 
 
 function App() {
@@ -21,7 +23,7 @@ function App() {
     <div>
       <NavigationBar></NavigationBar>
         <div>
-          <Button as={Link} to="/avaleht/"  variant="secondary">{t('avaleht')}</Button>{' '}
+          <Button as={Link} to='' variant="secondary">{t('avaleht')}</Button>{' '}
           <Button as={Link} to="/uudised/" variant="secondary">{t('uudised')}</Button>{' '}
           <Button as={Link} to="/kontakt/" variant="secondary">{t('kontakt')}</Button>{' '}
           <Button as={Link} to="/info/" variant="secondary">{t('info')}</Button>{' '}
@@ -37,6 +39,8 @@ function App() {
         <Route path='halda-uudised' element={ <HaldaUudised/>}/>
         <Route path='yks-uudis/:index' element={ <YksUudis/>}/>
         <Route path='muuda/:index' element={ <MuudaUudis/>}/>
+        <Route path='kasutaja-postitus/:kasutajaId' element={<KasutajaPostitus/>}/>
+        <Route path='yks-postitus/:postituseId' element={<YksPostitus/>}/>
       </Routes>
     </div>
   );

@@ -1,37 +1,32 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import mike1PNG from "../images/mike1.png"
-import jared1PNG from '../images/jared1.png';
-import francesco1PNG from '../images/francesco1.png';
+import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 
 function Avaleht() {
+  const [postitused, uuendaPostitused] = useState([]);
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(res => res.json())
+    .then(data => uuendaPostitused(data))
+  },[]);
+
   return (
-    <div><br />
-        <Carousel >
-              <Carousel.Item className="item">
-            <img src={mike1PNG} alt="mike" text="First slide" />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p> </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="item">
-            <img src={jared1PNG} alt="jared" text="Second slide" />
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p> </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="item">
-            <img src={francesco1PNG} alt="fransesco" text="Third slide" />
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p> </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>     
-  </div>
-  )
+    <div>
+      <p>See on avaleht</p>
+      {postitused.map(element => 
+        <div>
+          <div>{element.userId}</div>
+          <div>{element.id}</div>
+          <div>{element.title}</div>
+          <div>{element.body}</div>
+          <Link to={"kasutaja-postitus/" + element.userId}>
+            <button>Kõik selle kasutaja postitused</button>
+          </Link>
+          <Link to={"vaata-postitus/" + element.id}>
+            <button>Kõik selle kasutaja postitused</button>
+          </Link>
+        </div>
+         ) }    
+    </div>);
 }
 
 export default Avaleht 

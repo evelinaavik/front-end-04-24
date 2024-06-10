@@ -35,7 +35,7 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/avaleht/">{t('avaleht')}</Nav.Link>
+            <Nav.Link as={Link} to=''>{t('avaleht')}</Nav.Link>
             <Nav.Link as={Link} to="/uudised/">{t('uudised')}</Nav.Link>
             <Nav.Link as={Link} to="/kontakt/">{t('kontakt')}</Nav.Link>
             <Nav.Link as={Link} to="/info/">{t('info')}</Nav.Link>
