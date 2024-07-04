@@ -3,6 +3,8 @@ import Main from '../../components/Main/Main'
 import sale2PNG from '../../components/Images/sale2.png'
 
 function HomePage() {
+  
+ 
   return (
     <div>
       <div className="banner"> 

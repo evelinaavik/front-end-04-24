@@ -1,31 +1,54 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-// import jonPNG from '../../components/Images/jon.png';
-// import aksharPNG from '../../components/Images/akshar.png';
-// import scottPNG from '../../components/Images/scott.png';
+import React, { useState } from 'react'
+import ProductsJSON from '../../data/Products.json'
+import CartJSON from '../../data/Cart.json'
+import { Link } from 'react-router-dom'
+import {Button} from '@mui/material';
+import Button1 from 'react-bootstrap/Button';
 
 function Main() {
-  return (
+  const [products, editProducts] = useState(ProductsJSON.slice());
 
-//  <div style={{ display: 'block', width: 990, padding: 20, margin: 2 }}> 
-// style={{ backgroundColor: 'white'}}
-// <h4>React-Bootstrap Container Component</h4>
-// style={{display: 'flex', padding: '20px',}
+  const toCart = (product) => {
+    CartJSON.push(product);
+    const cartLS = JSON.parse(localStorage.getItem("cart")) || [];   // JSON.parse nö "" mahavõtmine
     
-    <Container >
-    <Row>
-      <Col>1 of 2</Col>
-      <Col>2 of 2</Col>
-    </Row>
-    <Row>
-      <Col>1 of 2</Col>
-      <Col>2 of 2</Col>
-    </Row>
-  </Container>
-// </div>  
-);
+    const found = cartLS.find(cp => cp.toode.id === product.id);    // cart product
+    if (found === undefined) {
+      cartLS.push({kogus: 1, toode: product});
+    } else {
+       found.kogus = found.kogus + 1;
+    }
+
+    cartLS.push(product);
+    localStorage.setItem("cart", JSON.stringify(cartLS));   
+
+  }
+
+  return (  
+    <div>
+      <br />
+      <div className="text1">  All items on sale!</div><br />
+      <div  className="container">
+        {products.map((product, index )=>    
+            <div className="item">
+                <div> 
+                  <img src={product.image} alt=""></img><br />
+                  {product.title} <br />
+                  <b> Sale price: {product.price}.00 eur </b> <br />
+                  Full price: {product.oldPrice}.00 eur <br />
+                  <Link to={"/product/" + index }> <Button>Product details</Button>
+                   </Link> <br />
+                   <Button1 onClick={() => toCart(product)} variant="outline-info">Add to cart</Button1><br />
+                </div>
+          </div>  
+ 
+    )}
+    </div>      
+  </div>
+ );
 }
 
 export default Main
+
+
+

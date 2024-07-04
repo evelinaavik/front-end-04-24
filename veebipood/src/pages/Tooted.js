@@ -32,7 +32,6 @@ function Tooted() {
 
   return (
     <div>
-
        <button onClick={sorteeriAZ}>SorteeriAZ</button>
        <button onClick={sorteeriZA}>SorteeriAZ</button>
        <button onClick={sorteeriTahedArv}>Sorteeri kasvavalt</button>

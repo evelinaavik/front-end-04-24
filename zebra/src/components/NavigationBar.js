@@ -16,7 +16,7 @@ function NavigationBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
+            {/* <Nav.Link as={Link} to="/admin">Admin</Nav.Link> */}
             <Nav.Link as={Link} to="/cart">Cart</Nav.Link>
             <Nav.Link as={Link} to="/shops">Shops</Nav.Link>
             <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
