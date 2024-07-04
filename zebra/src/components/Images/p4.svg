@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="200px" width="200px">
+  <defs>
+    <pattern id="doodad" width="115" height="115" viewBox="0 0 40 40" patternUnits="userSpaceOnUse" patternTransform="rotate(232)">
+      <rect width="100%" height="100%" fill="rgba(255, 255, 255,1)"/>
+      <path d="M-20 40l20-20l20 20l20-20l20 20l20-20l20 20v-20l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20 0l20-20l20 20l20-20l20 20l20-20l20 20v-20l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20 80l20-20l20 20l20-20l20 20l20-20l20 20v-20l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20z " fill="rgba(34, 34, 34,1)"/>
+      <path d="M-20 51l20-20l20 20l20-20l20 20l20-20l20 20v-20l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20 11l20-20l20 20l20-20l20 20l20-20l20 20v-20l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20zM-20 91l20-20l20 20l20-20l20 20l20-20l20 20v-20l-20-20l-20 20l-20-20l-20 20l-20-20l-20 20z " fill="rgba(132, 220, 198,1)" filter="url(#filter-doodad-2)"/>
+    </pattern>
+    <filter id="filter-doodad-2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.2"/>
+    </filter>
+  </defs>
+  <rect fill="url(#doodad)" height="200%" width="200%"/>
+</svg>

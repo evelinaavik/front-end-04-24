@@ -59,8 +59,8 @@ const [sonum, muudaSonum] = useState ("Muuda kogust!")  // sõna e string; "isik
     {kogus !== 0 && <button onClick={() => nulli ()}>Tagasi nulli</button> }
      <button disabled= {kogus === 0} onClick={vahenda}>-</button>  
 
-     <span clas
-     sName={kogus >= 10 ? "kuldne" : null}> {kogus} </span>     {/* kui kogus on  suurem või võrdne kui 10 */}
+     <span className={kogus >= 10 ? "kuldne" : null}> {kogus} </span>     
+     {/* kui kogus on  suurem või võrdne kui 10 */}
      <button onClick={suurenda}>+</button>  
     </div>
   )

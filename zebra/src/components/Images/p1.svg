@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="200px" width="200px">
+  <defs>
+    <pattern id="doodad" width="164" height="164" viewBox="0 0 40 40" patternUnits="userSpaceOnUse" patternTransform="rotate(304)">
+      <rect width="100%" height="100%" fill="rgba(255, 255, 255,1)"/>
+      <path d="M0 14a 0 0 0 0 0 0 0a 20-20 0 0 1 20-20v20a 0 0 0 0 0 0 0a-20 20 0 0 1-20 20zM0 54a 0 0 0 0 0 0 0a 20-20 0 0 1 20-20v20a 0 0 0 0 0 0 0a-20 20 0 0 1-20 20z" fill="rgba(34, 34, 34,1)"/>
+      <path d="M20 21a 1-1 0 0 0 1-1a 19-19 0 0 1 19-19v18a-1 1 0 0 0-1 1a-19 19 0 0 1-19 19z" fill="rgba(132, 220, 198,1)" filter="url(#filter-doodad-2)"/>
+    </pattern>
+    <filter id="filter-doodad-2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.2"/>
+    </filter>
+  </defs>
+  <rect fill="url(#doodad)" height="200%" width="200%"/>
+</svg>
