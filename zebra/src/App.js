@@ -11,6 +11,8 @@ import SingleProduct from './pages/global/SingleProduct';
 import AddProduct from './pages/admin/AddProduct';
 import EditProduct from './pages/admin/EditProduct';
 import MaintainProducts from './pages/admin/MaintainProducts';
+import CarouselBanner from './components/CarouselBanner';
+
 
 
 
@@ -18,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <NavigationBar/>
-     <Routes>
+      <Routes>
         <Route path='' element={<HomePage/>}></Route>
           <Route path='contact' element={<Contact/>}></Route>
           <Route path='shops' element={<Shops/>}></Route>

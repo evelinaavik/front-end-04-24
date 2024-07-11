@@ -9,30 +9,40 @@ function Main() {
   const [products, editProducts] = useState(ProductsJSON.slice());
 
   const toCart = (product) => {
-    CartJSON.push(product);
-    const cartLS = JSON.parse(localStorage.getItem("cart")) || [];   // JSON.parse nö "" mahavõtmine
-    
-    const found = cartLS.find(cp => cp.toode.id === product.id);    // cart product
-    if (found === undefined) {
-      cartLS.push({kogus: 1, toode: product});
-    } else {
-       found.kogus = found.kogus + 1;
-    }
-
+    const cartLS = JSON.parse(localStorage.getItem("cart")) || [];   
     cartLS.push(product);
     localStorage.setItem("cart", JSON.stringify(cartLS));   
-
   }
+
+  const filterByCategory = (categoryClicked) => {
+    const result = ProductsJSON.filter(product => product.category === categoryClicked);
+    editProducts(result);
+}
+
+const filterByDiscount = () => {
+  const result = ProductsJSON.filter(product => product.discount === "yes");
+  editProducts(result);
+}
+
+const reset = () => {
+  editProducts(ProductsJSON.slice())
+ }
 
   return (  
     <div>
       <br />
-      <div className="text1">  All items on sale!</div><br />
+        <div>
+          <button onClick={filterByDiscount} className="btnImg">Find the biggest price drops here!</button> 
+          <Button onClick={() => filterByCategory("men") }>Men's clothing</Button>       
+          <Button onClick={() => filterByCategory("women")}>Women's clothing</Button>
+          <Button onClick={() => filterByCategory("kids") }>Kids's clothing</Button>       
+          <Button onClick={reset}>All products</Button>          
+        </div><br />
       <div  className="container">
         {products.map((product, index )=>    
             <div className="item">
                 <div> 
-                  <img src={product.image} alt=""></img><br />
+                  <img src={product.image} alt="" className="itemImg"></img><br />
                   {product.title} <br />
                   <b> Sale price: {product.price}.00 eur </b> <br />
                   Full price: {product.oldPrice}.00 eur <br />
